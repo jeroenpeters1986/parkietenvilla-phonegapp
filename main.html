@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ParkietenVilla Kennis App</title>
+    <meta name="description" content="">
+    <meta name="author" content="Jeroen Peters (@jeroenp)">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="cleartype" content="on">
+
+    <link rel="stylesheet" href="components/lungo/lungo.css">
+    <link rel="stylesheet" href="components/lungo/lungo.lite.css">
+    <link rel="stylesheet" href="components/lungo/lungo.icon.css">
+    <link rel="stylesheet" href="static/stylesheets/app.css">
+</head>
+
+<body>
+<section id="main" data-transition="slide" data-aside="features">
+    <header>
+        <nav>
+            <div data-view-aside="features" data-icon="menu" id="mei"></div>
+        </nav>
+        <img src="static/images/logo4.png" class="title centered">
+        <nav class="on-right">
+            <abbr class="text tiny">v1.0&nbsp;</abbr>
+        </nav>
+    </header>
+
+    <nav data-control="groupbar" data-article="huisvesting-kooi huisvesting-plaats huisvesting-bodem huisvesting-speelgoed">
+        <a href="#" data-view-article="huisvesting-kooi" data-label="Kooi" class="active"></a>
+        <a href="#" data-view-article="huisvesting-plaats" data-label="Plaats"></a>
+        <a href="#" data-view-article="huisvesting-bodem" data-label="Bodem"></a>
+        <a href="#" data-view-article="huisvesting-speelgoed" data-label="Speelgoed"></a>
+    </nav>
+
+    <nav data-control="groupbar" data-article="pv-vervoer-knaagdierbakje pv-vervoer-vogeldoosje pv-vervoer-transportkist pv-vervoer-vogelkooi">
+        <a href="#" data-view-article="pv-vervoer-knaagdierbakje" data-label="Bakje" class="active"></a>
+        <a href="#" data-view-article="pv-vervoer-vogeldoosje" data-label="Doosje"></a>
+        <a href="#" data-view-article="pv-vervoer-transportkist" data-label="Transportkist"></a>
+        <a href="#" data-view-article="pv-vervoer-vogelkooi" data-label="Vogelkooi"></a>
+    </nav>
+
+    <article id="main-article" class="list indenteds scroll">
+        <ul>
+            <li>
+                <strong class="text bold">Welkom</strong>
+                    <span class="text tiny">
+                        Leuk dat je de ParkietenVilla.nl informatie app over grasparkieten
+                        en Engelse Parkieten gebruikt! Om informatie te bekijken over de
+                        verschillende onderwerpen kun je klikken op het menu icoontje
+                        links-boven op deze pagina.
+                    </span>
+            </li>
+            <li>
+                <strong class="text bold">Voor wie is de app?</strong>
+                    <span class="text tiny">
+                        De app is eigenlijk voor iedereen die zich interesseert voor de
+                        parkietensoort grasparkiet of de Engelse parkiet. De meeste informatie
+                        gaat specifiek over deze twee soort. Heb je echter een andere vogel,
+                        dan kun je tips over bijvoorbeeld tam maken ook prima voor je
+                        vogeltje gebruiken.
+                    </span>
+            </li>
+            <li class="contrast theme hidden" id="androidnotification" data-icon="mobile-phone">
+                <strong>
+                    ParkietenQuiz
+                </strong>
+                <small>
+                    <span class="text tiny">
+                    Jouw telefoon draait op Android <span id="android_version">4.0.x</span>.<br />
+                    Helaas werkt de ParkietenQuiz alleen op versie 2.x en <br />
+                    vanaf versie 4.1 of hoger. De Quiz is daarom uitgeschakeld.<br />
+                    Onze excuses hiervoor.
+                    </span>
+                </small>
+            </li>
+        </ul>
+        <img src="static/images/navi-cartoon-wallpaper.png" align="right">
+    </article>
+</section>
+
+<script src="components/quojs/quo.debug.js"></script>
+<script src="components/lungo/lungo.min.js"></script>
+<script>
+    Lungo.init({
+        name: 'ParkietenVillaInfoApp',
+        version: '1.0',
+        resources: [
+            'static/asides/parkietenvilla_app_menu.html'
+        ],
+        history: false
+    });
+
+    match_user_agent = navigator.userAgent.match(/Android [\d+\.]{3,5}/);
+    if(match_user_agent)
+    {
+        device_version = match_user_agent[0].replace('Android ','');
+        if(device_version == '4.0.4' || device_version == '4.0.3')
+        {
+            $$("#androidnotification").show();
+            $$("#android_version").html(device_version);
+            $$("#menu-item-quiz").hide();
+        }
+    }
+</script>
+<script src="static/javascripts/app.js"></script>
+<script src="static/javascripts/parkietenquiz.js"></script>
+</body>
+</html>
