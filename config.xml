@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns     = "http://www.w3.org/ns/widgets"
-        id        = "nl.parkietenvilla.kennisapp"
-        version   = "1.1">
+<widget xmlns       = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "nl.parkietenvilla.kennisapp"
+        version     = "1.0"
+        versionCode = '"2'>
+
+    <preference name="phonegap-version" value="3.3.0" />
+
     <name>ParkietenVilla Kennis App</name>
 
     <description>
-        De ParkietenVilla Kennis App is gemaakt om op een leuke manier veel praktische informatie over parkieten te weten te komen. Deze app bevat naast heldere Nederlandse informatie ook veel foto's en een leuke quiz. Met deze app heb je bruikbare informatie over je grasparkiet of Engelse parkieten direct bij de hand. Met de leuke quiz en vele plaatjes is de app uitermate geschikt voor kinderen.
+    De ParkietenVilla Kennis App is gemaakt om op een leuke manier veel praktische informatie over parkieten te weten te komen. Deze app bevat naast heldere Nederlandse informatie ook veel foto's en een leuke quiz. Met deze app heb je bruikbare informatie over je grasparkiet of Engelse parkieten direct bij de hand. Met de leuke quiz en vele plaatjes is de app uitermate geschikt voor kinderen.
     </description>
 
     <author href="http://jeroen.in" email="jeroenpeters1986@gmail.com">
@@ -16,6 +21,15 @@
     <preference name="SplashScreen" value="splashscreen" />
 	<preference name="SplashScreenDelay" value="3000" />
 	-->
+
+    <gap:plugin name="org.apache.cordova.device" />
+
+
+
+
+    
+
+    <icon src="icon.png" />
 	<gap:splash src="res/drawable/splashscreen.png" />
 	<gap:splash src="res/splashscreen.png" gap:platform="ios" width="320" height="480" />
 	<gap:splash src="res/drawable-ldpi/splashscreen.png" gap:platform="android" gap:density="ldpi" />
