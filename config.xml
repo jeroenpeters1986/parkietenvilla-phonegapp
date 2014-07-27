@@ -22,7 +22,7 @@
 	<preference name="SplashScreenDelay" value="3000" />
 	-->
 
-    <gap:plugin name="org.apache.cordova.device" />
+    <!-- <gap:plugin name="org.apache.cordova.device" /> -->
 
 
 
