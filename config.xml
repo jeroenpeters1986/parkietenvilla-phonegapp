@@ -5,30 +5,18 @@
         version     = "1.0"
         versionCode = '"2'>
 
+    <!-- GENERAL AND IMPORTANT STUFF -->
     <preference name="phonegap-version" value="3.3.0" />
-
     <name>ParkietenVilla Kennis App</name>
-
     <description>
     De ParkietenVilla Kennis App is gemaakt om op een leuke manier veel praktische informatie over parkieten te weten te komen. Deze app bevat naast heldere Nederlandse informatie ook veel foto's en een leuke quiz. Met deze app heb je bruikbare informatie over je grasparkiet of Engelse parkieten direct bij de hand. Met de leuke quiz en vele plaatjes is de app uitermate geschikt voor kinderen.
     </description>
-
     <author href="http://jeroen.in" email="jeroenpeters1986@gmail.com">
         Jeroen Peters
     </author>
+    <content src="index.html" />
      
-    <!--
-    <preference name="SplashScreen" value="splashscreen" />
-	<preference name="SplashScreenDelay" value="3000" />
-	-->
-
-    <gap:plugin name="org.apache.cordova.device" />
-
-
-
-
-
-
+    <!-- Icon and splash screen configurations -->
     <icon src="icon.png" />
 	<gap:splash src="res/drawable/splashscreen.png" />
 	<gap:splash src="res/splashscreen.png" gap:platform="ios" width="320" height="480" />
@@ -37,28 +25,16 @@
 	<gap:splash src="res/drawable-hdpi/splashscreen.png" gap:platform="android" gap:density="hdpi" />
 	<gap:splash src="res/drawable-xhdpi/splashscreen.png" gap:platform="android" gap:density="xhdpi" />
 	<gap:splash src="res/splashscreen.jpg" gap:platform="winphone" />
-	
 	<gap:splash src="res/screens/ios/splashscreen.png" gap:platform="ios" width="320" height="480" />
 
+    <!-- ACCESS RULES -->
     <access origin="http://www.parkietenvilla.nl" />
-    <access origin="*"/>
+    <!-- <access origin="*"/> -->
 
-    <content src="index.html" />
-
-    
-    
-	  <preference name="loglevel" value="DEBUG" />
-	  <!--
-      <preference name="splashscreen" value="resourceName" />
-      duration?
-      <preference name="backgroundColor" value="0xFFF" />
-      <preference name="loadUrlTimeoutValue" value="20000" />
-      <preference name="InAppBrowserStorageEnabled" value="true" />
-      <preference name="disallowOverscroll" value="true" />
-    -->
-
+    <!-- PREFERENCES -->
 	<preference name="InAppBrowserStorageEnabled" value="true" />
 	<preference name="DisallowOverscroll" value="true"/>
+    <!--<preference name="loglevel" value="DEBUG" />-->
 
     <feature name="App">
       <param name="android-package" value="org.apache.cordova.App"/>
@@ -69,7 +45,11 @@
     <feature name="SplashScreen">
       <param name="android-package" value="org.apache.cordova.SplashScreen"/>
     </feature>
-    
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.InAppBrowser"/>
+    </feature>
+
+    <!--
     <feature name="Geolocation">
       <param name="android-package" value="org.apache.cordova.GeoBroker"/>
     </feature>
@@ -115,7 +95,5 @@
     <feature name="Globalization">
       <param name="android-package" value="org.apache.cordova.Globalization"/>
     </feature>
-    <feature name="InAppBrowser">
-      <param name="android-package" value="org.apache.cordova.InAppBrowser"/>
-    </feature>
+    -->
 </widget>
