@@ -6,7 +6,7 @@
         versionCode = '"2'>
 
     <!-- GENERAL AND IMPORTANT STUFF -->
-    <preference name="phonegap-version" value="3.3.0" />
+    <preference name="phonegap-version" value="3.5.0" />
     <name>ParkietenVilla Kennis App</name>
     <description>
     De ParkietenVilla Kennis App is gemaakt om op een leuke manier veel praktische informatie over parkieten te weten te komen. Deze app bevat naast heldere Nederlandse informatie ook veel foto's en een leuke quiz. Met deze app heb je bruikbare informatie over je grasparkiet of Engelse parkieten direct bij de hand. Met de leuke quiz en vele plaatjes is de app uitermate geschikt voor kinderen.
@@ -17,7 +17,6 @@
     <content src="index.html" />
      
     <!-- Icon and splash screen configurations -->
-    <icon src="icon.png" />
 	<gap:splash src="res/drawable/splashscreen.png" />
 	<gap:splash src="res/splashscreen.png" gap:platform="ios" width="320" height="480" />
 	<gap:splash src="res/drawable-ldpi/splashscreen.png" gap:platform="android" gap:density="ldpi" />
@@ -27,6 +26,45 @@
 	<gap:splash src="res/splashscreen.jpg" gap:platform="winphone" />
 	<gap:splash src="res/screens/ios/splashscreen.png" gap:platform="ios" width="320" height="480" />
 
+    <!-- Android Icons -->
+    <platform name="android">
+        <icon src="res/icons/android/icon-36-ldpi.png" density="ldpi" />
+        <icon src="res/icons/android/icon-48-mdpi.png" density="mdpi" />
+        <icon src="res/icons/android/icon-72-hdpi.png" density="hdpi" />
+        <icon src="res/icons/android/icon-96-xhdpi.png" density="xhdpi" />
+    </platform>
+
+    <!-- iOS icons -->
+    <platform name="ios">
+        <!-- iOS 7.0+ -->
+        <!-- iPhone / iPod Touch  -->
+        <icon src="res/ios/icon-60.png" width="60" height="60" />
+        <icon src="res/ios/icon-60@2x.png" width="120" height="120" />
+        <!-- iPad -->
+        <icon src="res/ios/icon-76.png" width="76" height="76" />
+        <icon src="res/ios/icon-76@2x.png" width="152" height="152" />
+        <!-- iOS 6.1 -->
+        <!-- Spotlight Icon -->
+        <icon src="res/ios/icon-40.png" width="40" height="40" />
+        <icon src="res/ios/icon-40@2x.png" width="80" height="80" />
+        <!-- iPhone / iPod Touch -->
+        <icon src="res/icons/ios/icon-57.png" width="57" height="57" />
+        <icon src="res/icons/ios/icon-57x2.png" width="114" height="114" />
+        <!-- iPad -->
+        <icon src="res/icons/ios/icon-72.png" width="72" height="72" />
+        <icon src="res/icons/ios/icon-72x2.png" width="144" height="144" />
+        <!-- iPhone Spotlight and Settings Icon -->
+        <icon src="res/ios/icon-small.png" width="29" height="29" />
+        <icon src="res/ios/icon-small@2x.png" width="58" height="58" />
+        <!-- iPad Spotlight and Settings Icon -->
+        <icon src="res/ios/icon-50.png" width="50" height="50" />
+        <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
+    </platform>
+
+    <platform name="wp7">
+        <icon src="res/icons/windows-phone/icon-48.png" width="48" height="48" />
+    </platform>
+
     <!-- ACCESS RULES -->
     <access origin="http://www.parkietenvilla.nl" />
     <!-- <access origin="*"/> -->
@@ -34,6 +72,9 @@
     <!-- PREFERENCES -->
 	<preference name="InAppBrowserStorageEnabled" value="true" />
 	<preference name="DisallowOverscroll" value="true"/>
+    <preference name="Fullscreen" value="false" />
+
+    <preference name="EnableViewportScale" value="true"/>
     <!--<preference name="loglevel" value="DEBUG" />-->
 
     <feature name="App">
