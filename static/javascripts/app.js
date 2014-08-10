@@ -71,6 +71,7 @@ Lungo.ready(function() {
             Lungo.dom('div#pv-contact-formulier input[type=text]').toggleClass("border");
             Lungo.dom('div#pv-contact-formulier input[type=email]').toggleClass("border");
             Lungo.dom('div#pv-contact-formulier textarea').toggleClass("border");
+            Lungo.dom('div#pv-contact-formulier .contact-attach').hide();
             Lungo.dom('div#pv-contact-formulier .bootstrap-button').addClass("form").html(
                 '<button class="anchor accept margin-bottom" type="button" id="just-pretend-to-send">' +
                     '<span class="icon ok"></span><abbr>Verzenden!</abbr></button>');
